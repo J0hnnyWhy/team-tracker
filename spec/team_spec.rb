@@ -11,12 +11,12 @@ describe('Team') do
     Team.clear()
   end
 
-  describe('#initialize', '#attr_reader') do
-  it("returns the details of a team") do
-    test_team = Team.new("The Yardbirds")
-    expect(test_team.name()).to(eq("The Yardbirds"))
+    describe('#initialize', '#attr_reader') do
+    it("returns the details of a team") do
+      test_team = Team.new("The Yardbirds")
+      expect(test_team.name()).to(eq("The Yardbirds"))
+    end
   end
-end
 
   describe('.all') do
   it("returns all of the teams") do
@@ -42,4 +42,12 @@ end
     end
   end
 
+  describe('#add_member') do
+  it("add a new member to a team") do
+    test_team = Team.new("The Birds")
+    test_member = Member.new("Bill", "Smith", "345343")
+    test_team.add_member(test_member)
+    expect(test_team.players()).to(eq([test_member]))
+    end
+  end
 end
