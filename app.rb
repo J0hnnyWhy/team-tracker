@@ -22,12 +22,12 @@ get('/team/:name') do
    erb(:team)
 end
 
-post('team/:name') do
+post('/team/') do
   first = params.fetch('first')
   last = params.fetch('last')
   phone = params.fetch('phone')
   member = Member.new(first, last, phone)
   @team = Team.find(params.fetch('name'))
-  @team.add_member
-  erb(:team)
+  @team.add_member(member)
+  redirect back
 end
