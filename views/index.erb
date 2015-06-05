@@ -1,9 +1,14 @@
 <h1>Team Tracker</h1>
-<form action="/teams">
+<form action="/" method="post">
   <div class="form-group">
-    <label for ="team">Your </label>
+    <label for ="team">Enter a New Team</label>
     <input id="team" name="team" class="form-control" type="text">
   </div>
 
   <button type="submit" class="btn btn-info">Send</button>
 </form>
+<ul>
+  <% @teams.each() do |team| %>
+  <li><a href="/<%= team.name() %>"><%= team.name() %></a></li>
+  <% end %>
+</ul>
