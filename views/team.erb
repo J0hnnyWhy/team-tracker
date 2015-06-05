@@ -2,14 +2,16 @@
 
 
 <ul>
-  <% if @team.players.any?() %>
+
   <% @team.players.each do |info| %>
     <li> <%= info.first() %> <%= info.last() %> <%= info.phone() %></li>
     <% end %>
-    <% end %>
+
 </ul>
 <p><h4>Enter a New Team Member Here:</h4></p>
-<form action="/team/" method="post">
+<form action="/team" method="post">
+  <input id='name' name='name' type='hidden' value='@team.name()'>
+
   <div class="form-group">
     <label for ="first">Enter First Name</label>
     <input id="first" name="first" class="form-control" type="text" required="true">
