@@ -1,1 +1,26 @@
-<h1><%= @team %></h1>
+<h3>Here are the members on team: <%=  @team.name() %></h3>
+<ul>
+  <% @team.players.each do |info| %>
+    <li> <%= info.first() %> <%= info.last() %> <%= info.phone() %></li>
+    <% end %>
+</ul>
+<p><h4>Enter a New Team Member Here:</h4></p>
+<form action="/team/<% @team.name %>" method="post">
+  <div class="form-group">
+    <label for ="first">Enter First Name</label>
+    <input id="first" name="first" class="form-control" type="text">
+
+    <label for ="last">Enter Last Name</label>
+    <input id="last" name="last" class="form-control" type="text">
+
+    <label for ="phone">Enter a Phone Number</label>
+    <input id="phone" name="phone" class="form-control" type="text">
+  </div>
+
+  <button type="submit" class="btn btn-info">Send</button>
+</form>
+
+
+
+
+  <a href="/">Return to Main Page</a>

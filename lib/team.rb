@@ -23,4 +23,14 @@ class Team
   define_method(:add_member) do |member|
     @players.push(member)
   end
+
+  define_singleton_method(:find) do |identification|
+    found_team = nil
+    @@teams.each do |team|
+      if team.name==identification
+        found_team = team
+      end
+    end
+    found_team
+  end
 end

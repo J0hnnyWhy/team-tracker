@@ -50,4 +50,14 @@ describe('Team') do
     expect(test_team.players()).to(eq([test_member]))
     end
   end
+
+  describe('.find') do
+    it("returns a team by their name") do
+      test_number = Team.new("Bill")
+      test_number.save()
+      test_number2 = Team.new("Will")
+      test_number2.save()
+      expect(Team.find(test_number.name())).to(eq(test_number))
+    end
+  end
 end
