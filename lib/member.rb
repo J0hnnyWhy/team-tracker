@@ -23,7 +23,7 @@ class Member
     @@members = []
   end
 
-  define_singlton_method(:find) do |identification|
+  define_singleton_method(:find) do |identification|
     found_member = nil
     @@members.each do |member|
       if member.id==identification
