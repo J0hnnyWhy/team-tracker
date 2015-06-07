@@ -8,7 +8,7 @@ details on the specific team page.
 Ruby Setup Gems used: Sinatra, Sinatra-contrib, rspec, capybara, pry. Bundler
 must be installed.
 
-This app can be played at : https://morning-tundra-5672.herokuapp.com/
+This app can be played at : https://intense-oasis-7256.herokuapp.com/
 
 Copying/license: The MIT License (MIT)
 
