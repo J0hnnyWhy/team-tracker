@@ -30,7 +30,6 @@ post('/team') do
    member = Member.new(first, last, phone)
    member.save
    team = Team.find(params.fetch('name'))
-  #  binding.pry
-  #  @team = team.add_member(member).save
+   @team = team.add_member(member)
    redirect back
  end

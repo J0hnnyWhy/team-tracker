@@ -10,7 +10,7 @@
 </ul>
 <p><h4>Enter a New Team Member Here:</h4></p>
 <form action="/team" method="post">
-  <input id='name' name='name' type='hidden' value='@team.name()'>
+  <input id='name' name='name' type='hidden' value='<%= @team.name() %>'>
 
   <div class="form-group">
     <label for ="first">Enter First Name</label>
